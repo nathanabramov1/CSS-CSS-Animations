@@ -7,6 +7,10 @@
   width: 20%;
   margin: auto;
   display: inline-block;
+  transition: 3s;
+}
+.transform-demo>div:hover{
+  transform: translatex(150px);
 }
 
 /****************************************
@@ -18,11 +22,12 @@
   width: 200px;
   height: 200px;
   filter: grayscale(100%);
-
+  transition: 5s;
 }
 
 .transition-demo img:hover {
-
+  filter: none;
+  transform: rotate(360deg) scale(2.0);
 }
 
 /****************************************
@@ -35,11 +40,14 @@
   width: 500px;
   margin: auto;
   background-color: palegreen;
-
+  animation-name: sale-bar;
+  animation-duration: 5s;
 }
 
 @keyframes sale-bar {
   0% { background-color: lightgreen; width: 450px }
-  75% { background-color: #FF033E; width: 125x }
-  100% { background-color: crimson; width: 10px }
+  25%{background-color: purple;}
+  50%{background-color: yellow;border-radius: 10px;}
+  75% { background-color: #FF033E;border-radius: 30px; width: 125x }
+  100% { background-color: blue; width: 10px }
 }
